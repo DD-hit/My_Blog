@@ -1,0 +1,467 @@
+:root {
+  /* 主题色配置 */
+  --vp-c-brand-1: #3ba7ff;  /* 主色调 - 蓝色 */
+  --vp-c-brand-2: #2563eb;  /* 深一点的蓝色 */
+  --vp-c-brand-3: #1d4ed8;  /* 更深的蓝色 */
+  --vp-c-brand-soft: rgba(59, 130, 246, 0.14);  /* 半透明背景 */
+  
+  /* 主页标题渐变色 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+}
+
+/* 隐藏滚动条 */
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+/* logo 高度重新设置 */
+.VPImage.logo {
+  height: 52px;
+}
+
+/* iconfont symbol 引入 */
+.icon-font {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  overflow: hidden;
+}
+
+/* span 高亮文字包括 code 代码块的内容 */
+span code {
+  color: inherit !important;
+}
+
+/* markdown ==...== highlight (drake-juejin style) */
+.VPDoc mark,
+.vp-doc mark {
+  border: .1em solid var(--height-light-border-color);
+  color: var(--height-light-color);
+  background-color: transparent;
+  padding: .1rem .5rem;
+  border-radius: 2rem;
+  margin: 0 .2rem;
+  font-size: .95rem;
+}
+
+/* -------------------------------------- */
+
+.linear-color {
+  /* background -> background-clip -> color 顺序不能乱, color 和 -webkit-text-fill-color 都可以 */
+  background: -webkit-linear-gradient(120deg, #13b2c1, #d2cf16);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* -webkit-text-fill-color: transparent; */
+}
+
+html.dark body {
+  color: var(--vp-c-text-1);
+}
+
+html.dark .vp-doc,
+html.dark .VPDoc {
+  color: var(--vp-c-text-1);
+}
+
+/* 让 VitePress 代码块在明暗模式下使用不同背景色 */
+:root {
+  /* 白天：浅灰背景的代码块，更贴近整体浅色页面 */
+  --vp-code-block-bg: #d3d3d357;
+}
+
+html.dark {
+  /* 夜间：深灰背景代码块，与暗色背景拉开一点层次 */
+  --vp-code-block-bg: #202127a1;
+}
+
+/* 代码块行号颜色 - 白天模式灰色 */
+:root {
+  --vp-code-line-number-color: #888888;
+}
+
+html.dark {
+  --vp-code-line-number-color: #6b7280;
+}
+
+
+
+/* ========== 任务列表样式 ========== */
+.vp-doc .task-list-item {
+  list-style: none;
+}
+
+.vp-doc .task-list-item input[type="checkbox"] {
+  margin-right: 0.5em;
+  margin-left: -1.5em;
+}
+
+/* .vp-doc div[class*='language-'], .vp-block {
+    position: relative;
+    margin: 16px -24px;
+    background-color: #c9c9c965;
+    overflow-x: auto;
+    transition: background-color 0.5s;
+} */
+
+.outline-marker {
+  margin-top: 14px;
+}
+
+/* ========== 脚注样式 ========== */
+.vp-doc .footnotes {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vp-c-divider);
+  font-size: 0.875rem;
+}
+
+.vp-doc .footnote-ref {
+  font-size: 0.75rem;
+  vertical-align: super;
+}
+
+/* ========== Mermaid 流程图样式 ========== */
+.vp-doc div[class*="language-mermaid"] {
+  background: var(--vp-c-bg-soft-mermaid);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  max-height: 500px;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.vp-doc div[class*="language-mermaid"]::-webkit-scrollbar {
+  display: none;
+}
+
+.vp-doc .mermaid-wrapper {
+  text-align: center;
+  padding: 1rem;
+  min-height: 80px;
+  cursor: grab;
+  transform-origin: center center;
+  transition: transform 0.1s ease-out;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vp-doc .mermaid-wrapper:active {
+  cursor: grabbing;
+}
+
+.vp-doc .mermaid-wrapper svg {
+  max-width: 100%;
+  max-height: 420px;
+  height: auto;
+}
+
+/* Mermaid 缩放控制按钮 */
+.mermaid-controls {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  padding: 6px 8px;
+  margin: 0 0 0 -50px;
+  background: var(--vp-c-bg-soft);
+  border-bottom: 1px solid var(--vp-c-divider);
+  z-index: 10;
+}
+
+.mermaid-controls button {
+  padding: 3px 8px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+}
+
+.mermaid-controls button:hover {
+  background: #135CE0;
+  color: white;
+  /* border-color: var(--vp-c-brand); */
+}
+
+/* Mermaid 全屏模式 */
+.mermaid-fullscreen {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  max-height: none !important;
+  z-index: 9999 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  background: var(--vp-c-bg) !important;
+}
+
+.mermaid-fullscreen .mermaid-controls {
+  padding: 10px 16px;
+}
+
+.mermaid-fullscreen .mermaid-controls button {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.mermaid-fullscreen .mermaid-wrapper {
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.mermaid-fullscreen .mermaid-wrapper svg {
+  max-width: 95vw;
+  max-height: 85vh;
+}
+
+/* ========== 图片缩放样式 ========== */
+.medium-zoom-overlay {
+  z-index: 999;
+}
+
+.medium-zoom-image--opened {
+  z-index: 1000;
+}
+
+/* ========== 上下标样式 ========== */
+.vp-doc sub,
+.vp-doc sup {
+  font-size: 0.75em;
+}
+
+/* ========== 缩写样式 ========== */
+.vp-doc abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+
+
+/* ========== 文档宽度优化（完全按照示例配置） ========== */
+@media (min-width: 1440px) {
+  :root {
+    --vp-layout-max-width: 100%;
+  }
+  .VPNavBar .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1800px;
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --vp-layout-max-width: 90%;
+  }
+  .VPNavBar .container {
+    max-width: 90%;
+  }
+}
+
+.VPContent .VPDoc.has-aside .content-container {
+  max-width: 100%;
+}
+
+/* ========== 侧边栏字体大小优化 ========== */
+
+/* 左侧边栏字体 */
+.VPSidebar {
+  font-size: 15px;
+}
+
+.VPSidebar .group .title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.VPSidebar .link {
+  font-size: 14px;
+  line-height: 32px;
+}
+
+/* 右侧目录字体 */
+.VPDocAsideOutline {
+  font-size: 15px;
+}
+
+.VPDocAsideOutline .outline-title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.VPDocAsideOutline .outline-link {
+  font-size: 14px;
+  line-height: 32px;
+}
+
+/* 2K屏幕优化 (1440px+) */
+@media (min-width: 1440px) {
+  /* 左侧边栏 */
+  .VPSidebar {
+    font-size: 16px;
+  }
+  
+  .VPSidebar .group .title {
+    font-size: 16px;
+  }
+  
+  .VPSidebar .link {
+    font-size: 15px;
+    line-height: 36px;
+  }
+  
+  /* 右侧目录 */
+  .VPDocAsideOutline {
+    font-size: 16px;
+  }
+  
+  .VPDocAsideOutline .outline-title {
+    font-size: 16px;
+  }
+  
+  .VPDocAsideOutline .outline-link {
+    font-size: 15px;
+    line-height: 36px;
+  }
+  
+  /* 文章内容字体 */
+  .vp-doc {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  
+  .vp-doc h1 {
+    font-size: 2.5rem;
+  }
+  
+  .vp-doc h2 {
+    font-size: 2rem;
+  }
+  
+  .vp-doc h3 {
+    font-size: 1.5rem;
+  }
+  
+  .vp-doc h4 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ========== 阅读页面背景图片 ========== */
+
+/* 亮色模式背景 */
+.VPContent {
+  position: relative;
+  background-image: url('/vitepress-theme-mochi/read-light.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* 暗色模式背景 */
+html.dark .VPContent {
+  background-image: url('/vitepress-theme-mochi/read-dark.png');
+}
+
+/* 添加半透明蒙版提高可读性 */
+.VPContent::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+  z-index: 0;
+}
+
+html.dark .VPContent::before {
+  background-color: rgba(26, 26, 26, 0.85);
+}
+
+/* 确保内容在蒙版之上 */
+.VPContent > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== 文章标题背景与导航栏一致 ========== */
+
+/* .vp-doc h1 {
+  background-color: var(--vp-nav-bg-color);
+  padding: 1rem 1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  border-radius: 8px;
+} */
+
+/* 如果是指页面标题容器 */
+/* .VPDoc .content-container .content h1:first-child {
+  background-color: var(--vp-nav-bg-color)!important;
+  padding: 1.5rem;
+  margin: -1.5rem -1.5rem 2rem -1.5rem;
+  border-radius: 8px;
+} */
+
+/* ========== 导航栏 Logo/Title 区域背景 ========== */
+
+/* .VPNavBarTitle .title {
+  background-color: var(--vp-nav-bg-color) !important;
+} */
+
+/* 覆盖 VitePress 在大屏幕上的透明背景 */
+@media (min-width: 960px) {
+  .VPNavBar.has-sidebar .title {
+    
+    background-color: var(--vp-nav-bg-color) !important;
+  }
+}
+
+/* ========== 明暗切换圆形扩散动画 ========== */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root),
+.dark::view-transition-new(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root),
+.dark::view-transition-old(root) {
+  z-index: 9999;
+}
+
+/* ========== Aside 背景透明 ========== */
+#app > div.Layout > aside {
+  background-color: transparent !important;
+  border-right: 2px solid #6666663d;
+}

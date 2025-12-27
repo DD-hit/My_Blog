@@ -1,0 +1,53 @@
+{
+  "name": "cj_leardoc",
+  "version": "0.0.0",
+  "description": "Cangjie Program Learning Doc.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run config:generate && vitepress dev docs --host",
+    "dev:watch": "npm run config:watch & npm run dev",
+    "build": "npm run config:generate && vitepress build docs",
+    "serve": "vitepress serve docs",
+    "config:generate": "node scripts/generateConfig.js",
+    "config:watch": "node scripts/watchConfig.js"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitcode.com/DD_Summer/CJ_LearnDoc.git"
+  },
+  "author": "DD",
+  "license": "MIT",
+  "devDependencies": {
+    "@mdit/plugin-katex": "^0.24.1",
+    "autoprefixer": "^10.4.13",
+    "chalk": "4.1.2",
+    "katex": "^0.16.25",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-attrs": "^4.3.1",
+    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-mark": "^4.0.0",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "medium-zoom": "^1.1.0",
+    "postcss": "^8.4.20",
+    "sass": "^1.56.1",
+    "tailwindcss": "^3.2.4",
+    "vitepress": "^2.0.0-alpha.15"
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.9.0",
+    "fs-extra": "^11.1.0",
+    "js-yaml": "^4.1.0",
+    "mermaid": "11.4.0",
+    "moment": "^2.29.4",
+    "typeit": "^8.7.1",
+    "viewerjs": "^1.11.2",
+    "vue": "^3.2.45"
+  }
+}
