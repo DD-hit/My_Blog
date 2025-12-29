@@ -376,7 +376,7 @@ html.dark {
 /* 亮色模式背景 */
 .VPContent {
   position: relative;
-  background-image: url('/vitepress-theme-mochi/read-light.png');
+  background-image: url('/read-light.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -385,7 +385,7 @@ html.dark {
 
 /* 暗色模式背景 */
 html.dark .VPContent {
-  background-image: url('/vitepress-theme-mochi/read-dark.png');
+  background-image: url('/read-dark.png');
 }
 
 /* 添加半透明蒙版提高可读性 */
