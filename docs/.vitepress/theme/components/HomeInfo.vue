@@ -23,8 +23,10 @@ const props = defineProps({
 const emit = defineEmits(['clickCategories', 'clickTags'])
 
 const avatarImg = computed(() =>
-  props.frontmatter.avatar.startsWith('http') ? props.frontmatter.avatar : withBase(props.frontmatter.avatar)
-)
+  props.frontmatter.avatar && props.frontmatter.avatar.startsWith('http')
+    ? props.frontmatter.avatar
+    : withBase(props.frontmatter.avatar)
+);
 
 const gradientBackground = () => `-webkit-linear-gradient(90deg, ${randomRGB()}, ${randomRGB()})`
 

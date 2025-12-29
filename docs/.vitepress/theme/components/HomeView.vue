@@ -21,7 +21,7 @@ const runTypeIt = () => {
   new TypeIt('#type-it', {
     strings: [
       "Welcome to DD's Blog.",
-      '探索仓颉编程语言',
+      '探索编程语言',
       '记录学习与成长',
     ],
     speed: 100,

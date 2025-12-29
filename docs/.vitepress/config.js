@@ -35,7 +35,7 @@ const config = async () => {
   await getPages()
 
   const themeConfig = {
-    logo: { light: '/logo-light.svg', dark: '/logo-dark.svg' }, // 主页 logo
+    logo: { light: '/logo-light.png', dark: '/logo-dark.png' }, // 主页 logo
     siteTitle: false, // 主页标题, 设置为 false 可不显示
     nav,
     sidebar,
