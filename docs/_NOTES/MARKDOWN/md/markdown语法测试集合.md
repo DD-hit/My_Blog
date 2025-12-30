@@ -1,11 +1,8 @@
 ---
 title: Markdown文本样式
 date: 2025-12-01
-author: DD
-categories:
-  - markdown学习
-tags:
-  - markdown
+tags: []
+categories: [markdown学习]
 ---
 # **Markdown文本样式测试文档**
 

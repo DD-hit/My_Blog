@@ -1,15 +1,14 @@
-# mochi-blog
+### 添加笔记
+    在\\docs\\_NOTES下创建目录再拉入笔记即可
 
-vitepress-theme-mochi
-
-## dev & build
-
-### 部署
+### 一键更新
 
 ```shell
-bash deploy.sh
+cd ~/MyBlog
+./update-blog.sh
 ```
 
-### 网址
+### 仓库地址
 
-[gitPages](https://lemonnuu.github.io/vitepress-theme-mochi/)
+[Repository](https://github.com/DD-hit/My_Blog.git)
+

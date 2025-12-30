@@ -2,7 +2,7 @@
 title: Key Commands
 date: 2025-12-26
 tags: []
-categories: [技术笔记]
+categories: [大数据]
 ---
 
 # Key Commands
